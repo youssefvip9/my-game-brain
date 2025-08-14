@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <title>تحميل اللعبة</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- شريط علوي -->
+    <header>
+        <a href="#" id="contact">تواصل معنا</a>
+    </header>
+
+    <!-- محتوى الموقع -->
+    <main>
+        <img src="
+Image
+logo.png" alt="شعار اللعبة" class="logo">
+        <a href="game.zip" download class="download-btn">Download</a>
+    </main>
+
+    <!-- نافذة منبثقة -->
+    <div id="popup">
+        <div class="popup-content">
+            <span id="close-popup">&times;</span>
+            <h2>تواصل معنا على الديسكورد</h2>
+            <p>اسمك على الديسكورد: <b>yahiamohamed2238</b></p>
+        </div>
+    </div>
+
+    <script>
+        // إظهار وإخفاء النافذة
+        document.getElementById("contact").onclick = function() {
+            document.getElementById("popup").style.display = "flex";
+        }
+        document.getElementById("close-popup").onclick = function() {
+            document.getElementById("popup").style.display = "none";
+        }
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("popup")) {
+                document.getElementById("popup").style.display = "none";
+            }
+        }
+    </script>
+
+</body>
+</html>
